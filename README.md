@@ -6,7 +6,7 @@ Eiffel RemRem is a project undertaken to establish a communication layer between
 - Ability to introduce message validation
 
 ## RemRem Architecture
-![RemRem Architecture](https://github.com/Ericsson/eiffel-remrem/raw/master/media/remrem_architecture.png "RemRem Architecture")
+![RemRem Architecture](https://github.com/Ericsson/eiffel-remrem/raw/master/src/site/media/remrem_architecture.png "RemRem Architecture")
 
 Architecture of remrem is based on Microservice and API design principles utilizing state of the art in development.
 
