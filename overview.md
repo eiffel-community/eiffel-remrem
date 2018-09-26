@@ -23,7 +23,7 @@ Eiffel RemRem is a project undertaken to establish a communication layer between
 - Separation of concerns
 - Ability to secure message bus entry/exit points
 - Ability to introduce message validation
-See [this overview](overview.md) for further information on architecture, principles, links to related components and instructions for building and releasing.
+See [this overview](overview.md) for further information on architecture, principles and related components.
 
 # About this repository
 The contents of this repository are licensed under the [Apache License 2.0](./LICENSE).
