@@ -17,7 +17,10 @@
 
 <img src="./images/logo.png" alt="Eiffel RemRem" width="350"/>
 
+[![Sandbox badge](https://img.shields.io/badge/Stage-Sandbox-yellow)](https://github.com/eiffel-community/community/blob/master/PROJECT_LIFECYCLE.md#stage-sandbox)
+
 # Eiffel RemRem
+
 Eiffel RemRem is a project undertaken to establish a communication layer between messagebus technologies and rest of Eiffel project in order to accomplish:
 - Technology agnosticism
 - Separation of concerns
