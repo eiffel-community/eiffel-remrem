@@ -1,26 +1,16 @@
-<!---
-   Copyright 2018 Ericsson AB.
-   For a full list of individual contributors, please see the commit history.
+# REMReM
+REMReM ( **RE**ST **M**ailbox for **Re**gistered **M**essages ) contains a set of tools to generate validated Eiffel messages and publish them on a RabbitMQ message bus. They can operate as micro services or as stand-alone CLI versions.
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+REMReM consists of two main functions:
+- REMReM Generate: for generating valid Eiffel messages and validating them against the [protocol schemas](https://github.com/eiffel-community/eiffel/tree/master/schemas).
+- REMReM Publish: for publishing Eiffel messages on an RabbitMQ with authentication. When using REMReM as a service it provides an endpoint to both generate the messages and publishing them. For information on how to use the publish service please see the [REMReM publish usage](https://github.com/eiffel-community/eiffel-remrem-publish/blob/master/wiki/markdown/usage/service.md#usage).
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
---->
-
-# RemRem Architecture
+## REMReM Architecture
 ![RemRem Architecture](https://github.com/eiffel-community/eiffel-remrem/raw/master/media/remrem_architecture.png "RemRem Architecture")
 
-Architecture of remrem is based on Microservice and API design principles utilizing state of the art in development.
+The architecture of REMReM is based on Microservice and API design principles utilizing state of the art in development.
 
-## Principles
+### Principles
 - Microservices driven
  - Independent deployment
  - Decoupled services
@@ -29,11 +19,10 @@ Architecture of remrem is based on Microservice and API design principles utiliz
  - Isolates failures
  - Decentralized
 
-# RemRem Components
+## RemRem Components
 - Generate (Microservice): Can be used to generate validated Eiffel messages. [Generate Github Repo](https://github.com/eiffel-community/eiffel-remrem-generate)
 - Publish (Microservice): Can be used to publish Eiffel messages. [Publish Github Repo](https://github.com/eiffel-community/eiffel-remrem-publish)
 - Semantics (Library): Injectable library used with Generate Microservice to enable generation of new Eiffel messages. [Semantics Github Repo](https://github.com/eiffel-community/eiffel-remrem-semantics)
-- Shared (Library): Interface information used in injecting message libraries. Utilized by Semantics and Eifel3Messaging innersource projects [Shared Github Repo](https://github.com/eiffel-community/eiffel-remrem-shared)
 
-# Building and releasing
-For every RemRem component it is needed to create a new release tag in the component's repository on github. Once the tag is created the build for the new release tag will be started when you visit the component's page on jitpack.io (i.e. https://jitpack.io/#eiffel-community/eiffel-remrem-generate) and published on component's page on jitpack.io or when another application is build and it is dependent of the new release tag from jitpack.io.
+## Building and releasing
+For every REMReM component it is needed to create a new release tag in the component's repository on GitHub. Once the tag is created the build for the new release tag will be started when you visit the component's page on jitpack.io (i.e. https://jitpack.io/#eiffel-community/eiffel-remrem-generate) and published on component's page on jitpack.io or when another application is build and it is dependent of the new release tag from jitpack.io.
